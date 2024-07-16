@@ -1,0 +1,22 @@
+.carousel {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.carousel-item {
+  height: 400px; /* İstediğiniz yüksekliği buraya ayarlayabilirsiniz */
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover; /* Görsellerin kapsayıcıya sığmasını sağlar ve taşan kısmı keser */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  background-color: rgb(255, 255, 255);
+
+
+  opacity: 0.5;
+  color: #000000; /* Yazı rengini beyaz olarak ayarladık */
+}

@@ -1,0 +1,105 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  width: 100%;
+}
+
+.navbar-container-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar-logo-container-div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-div {
+  cursor: pointer;
+}
+
+.navbar-search-container-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Daha geniş bir alan */
+}
+
+.navbar-input-search-div {
+  flex: 1;
+}
+
+.navbar-search-button-div {
+  margin: 0;
+}
+
+.navbar-navigation-div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-favorite-div, .navbar-basket-div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.favorite-count, .basket-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.8rem;
+}
+
+.navbar-favorite-div > div:first-child, .navbar-basket-div > div:first-child {
+  position: relative;
+}
+
+.navbar-favorite-div p, .navbar-basket-div p {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container-div {
+    flex-direction: column;
+  }
+
+  .navbar-search-container-div {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-navigation-div {
+    margin-top: 1rem;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navbar-favorite-div, .navbar-basket-div {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-search-container-div {
+    flex-direction: column;
+  }
+
+  .navbar-search-button-div {
+    margin-top: 0.5rem;
+  }
+}

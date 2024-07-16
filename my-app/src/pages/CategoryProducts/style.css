@@ -1,0 +1,135 @@
+/* style.css */
+
+/* Genel stil */
+.product-category-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-category-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Mobile uyumluluk için eklendi */
+}
+
+.category-name h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.filter-dropdown-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.filter-dropdown-div .dropdown-toggle {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.filter-dropdown-div .dropdown-toggle:hover,
+.filter-dropdown-div .dropdown-toggle:focus {
+  background-color: #218838;
+}
+
+.filter-dropdown-div .dropdown-menu {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.filter-dropdown-div .dropdown-item {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+.filter-dropdown-div .dropdown-item:hover,
+.filter-dropdown-div .dropdown-item:focus {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Ürün listesi stil */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item p {
+  margin: 0.5rem 0;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Yükleniyor ve hata mesajları stil */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive stil */
+@media (max-width: 992px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-category-filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-dropdown-div {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-category-container {
+    padding: 0.5rem;
+  }
+
+  .category-name h3 {
+    font-size: 1.25rem;
+  }
+
+  .filter-dropdown-div .dropdown-toggle {
+    width: 100%;
+  }
+}

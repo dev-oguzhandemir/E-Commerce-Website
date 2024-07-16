@@ -1,0 +1,163 @@
+/* Reset some basic elements for cross-browser consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.basket-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.basket-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #444;
+}
+
+.basket-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.basket-item:last-child {
+  border-bottom: none;
+}
+
+.basket-item p {
+  margin: 5px 0;
+}
+
+.basket-item-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.basket-item-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.basket-item-button:active,
+.basket-item-button:hover {
+  background-color: #218838;
+}
+
+.basket-total {
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #444;
+}
+
+.basket-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.basket-actions button:first-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.basket-actions button:first-child:active,
+.basket-actions button:first-child:hover {
+  background-color: #c82333;
+}
+
+.basket-actions button:last-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.basket-actions button:last-child:active,
+.basket-actions button:last-child:hover {
+  background-color: #0056b3;
+}
+
+.basket-actions button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .basket-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .basket-item-buttons {
+    margin-top: 10px;
+  }
+
+  .basket-total {
+    text-align: center;
+  }
+
+  .basket-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .basket-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .basket-container {
+    padding: 10px;
+  }
+
+  .basket-title {
+    font-size: 1.2em;
+  }
+
+  .basket-item-button {
+    padding: 5px 8px;
+    font-size: 0.9em;
+  }
+
+  .basket-total {
+    font-size: 1em;
+  }
+
+  .basket-actions button {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,50 @@
+/* style.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.advertising-space-container {
+width: 100%;
+  height: 30px;
+
+
+    background-color:#b35220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertising-space-div {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.advertising-space-container button {
+  background-color: #FF6D2D;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.advertising-space-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.advertising-space-container button:active {
+  background-color: #004494;
+  transform: scale(0.95);
+}
+
+.advertising-space-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
